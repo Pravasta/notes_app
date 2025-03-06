@@ -1,4 +1,4 @@
-package com.example.architecture_project
+package com.pravasta.notes_app
 
 import io.flutter.embedding.android.FlutterActivity
 

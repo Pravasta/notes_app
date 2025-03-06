@@ -19,6 +19,6 @@ class Endpoint {
   }
 
   factory Endpoint.staging() {
-    return Endpoint(baseURL: "tes.futake.co.id");
+    return Endpoint(baseURL: "tes.staging");
   }
 }

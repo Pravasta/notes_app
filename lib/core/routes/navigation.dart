@@ -1,4 +1,4 @@
-import 'package:architecture_project/core/utils/app_transition.dart';
+import 'package:notes_app/core/utils/app_transition.dart';
 import 'package:flutter/material.dart';
 
 final GlobalKey<NavigatorState> navigatorKey = GlobalKey<NavigatorState>();

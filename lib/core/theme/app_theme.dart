@@ -1,6 +1,6 @@
-import 'package:architecture_project/core/theme/app_color.dart';
-import 'package:architecture_project/core/theme/app_color_scheme.dart';
-import 'package:architecture_project/core/theme/app_text.dart';
+import 'package:notes_app/core/theme/app_color.dart';
+import 'package:notes_app/core/theme/app_color_scheme.dart';
+import 'package:notes_app/core/theme/app_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 

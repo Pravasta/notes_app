@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:notes_app/core/routes/navigation.dart';
 
 import 'core/injection/env.dart';
 import 'core/theme/app_theme.dart';
@@ -27,11 +28,12 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     return MaterialApp(
       showSemanticsDebugger: false,
-      title: 'Flutter Demo',
+      title: 'Notes App',
       debugShowCheckedModeBanner: false,
       themeMode: ThemeMode.dark,
       theme: AppTheme.lightTheme(context),
       darkTheme: AppTheme.darkTheme(context),
+      navigatorKey: navigatorKey,
       // home: SplashPage(),
     );
   }
