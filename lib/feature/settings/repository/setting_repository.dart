@@ -1,6 +1,6 @@
 import 'package:notes_app/core/repositories/user_model.dart';
 
-import '../../../core/service/firebase_service.dart';
+import '../../../core/service/firebase_auth_service.dart';
 
 abstract class SettingRepository {
   Future<void> signOut();
@@ -8,15 +8,15 @@ abstract class SettingRepository {
 }
 
 class SettingRepositoryImpl implements SettingRepository {
-  final FirebaseService _firebaseService;
+  final FirebaseAuthService _firebaseAuthService;
 
-  SettingRepositoryImpl({required FirebaseService firebaseService})
-    : _firebaseService = firebaseService;
+  SettingRepositoryImpl({required FirebaseAuthService firebaseAuthService})
+    : _firebaseAuthService = firebaseAuthService;
 
   @override
   Future<void> signOut() async {
     try {
-      await _firebaseService.signOut();
+      await _firebaseAuthService.signOut();
     } catch (e) {
       throw e.toString();
     }
@@ -25,7 +25,7 @@ class SettingRepositoryImpl implements SettingRepository {
   @override
   Future<UserModel> getCurrentUser() async {
     try {
-      final result = await _firebaseService.getCurrentUser();
+      final result = await _firebaseAuthService.getCurrentUser();
       return result;
     } catch (e) {
       throw e.toString();
@@ -33,6 +33,8 @@ class SettingRepositoryImpl implements SettingRepository {
   }
 
   factory SettingRepositoryImpl.create() {
-    return SettingRepositoryImpl(firebaseService: FirebaseServiceImpl.create());
+    return SettingRepositoryImpl(
+      firebaseAuthService: FirebaseAuthServiceImpl.create(),
+    );
   }
 }

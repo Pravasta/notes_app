@@ -56,16 +56,6 @@ class _SettingsViewState extends State<SettingsView> {
       );
     }
 
-    Widget buttonEditProfile() {
-      return DefaultButton(
-        title: 'Edit Profile',
-        onTap: () {},
-        titleColor: appColorScheme(context).onSecondary,
-        backgroundColor: appColorScheme(context).primary,
-        borderColor: appColorScheme(context).primary,
-      );
-    }
-
     return Scaffold(
       appBar: AppBar(
         title: Text('Settings', style: appTextTheme(context).headlineSmall),
@@ -139,9 +129,7 @@ class _SettingsViewState extends State<SettingsView> {
                       ),
                     ],
                   ),
-                  SizedBox(height: 30),
-                  buttonEditProfile(),
-                  SizedBox(height: 10),
+                  Spacer(),
                   buttonLogout(),
                 ],
               );

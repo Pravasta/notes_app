@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:notes_app/feature/home/view/home_page.dart';
 
-import '../../home/view/home_page.dart';
 import '../../settings/view/settings_page.dart';
 
 class MainPage extends StatefulWidget {

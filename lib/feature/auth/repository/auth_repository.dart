@@ -1,5 +1,5 @@
 import 'package:notes_app/core/repositories/user_model.dart';
-import 'package:notes_app/core/service/firebase_service.dart';
+import 'package:notes_app/core/service/firebase_auth_service.dart';
 
 abstract class AuthRepository {
   Future<UserModel> signInWithEmailAndPassword(String email, String password);
@@ -12,10 +12,10 @@ abstract class AuthRepository {
 }
 
 class AuthRepositoryImpl implements AuthRepository {
-  final FirebaseService _firebaseService;
+  final FirebaseAuthService _firebaseAuthService;
 
-  AuthRepositoryImpl({required FirebaseService firebaseService})
-    : _firebaseService = firebaseService;
+  AuthRepositoryImpl({required FirebaseAuthService firebaseAuthService})
+    : _firebaseAuthService = firebaseAuthService;
 
   @override
   Future<UserModel> signInWithEmailAndPassword(
@@ -23,7 +23,7 @@ class AuthRepositoryImpl implements AuthRepository {
     String password,
   ) async {
     try {
-      final user = await _firebaseService.singInWithEmailAndPassword(
+      final user = await _firebaseAuthService.singInWithEmailAndPassword(
         email,
         password,
       );
@@ -36,7 +36,7 @@ class AuthRepositoryImpl implements AuthRepository {
   @override
   Future<String> signOut() async {
     try {
-      final result = await _firebaseService.signOut();
+      final result = await _firebaseAuthService.signOut();
       return result;
     } catch (e) {
       throw e.toString();
@@ -50,7 +50,7 @@ class AuthRepositoryImpl implements AuthRepository {
     String password,
   ) async {
     try {
-      final result = await _firebaseService.singUpWithEmailAndPassword(
+      final result = await _firebaseAuthService.singUpWithEmailAndPassword(
         userName,
         email,
         password,
@@ -62,6 +62,8 @@ class AuthRepositoryImpl implements AuthRepository {
   }
 
   factory AuthRepositoryImpl.create() {
-    return AuthRepositoryImpl(firebaseService: FirebaseServiceImpl.create());
+    return AuthRepositoryImpl(
+      firebaseAuthService: FirebaseAuthServiceImpl.create(),
+    );
   }
 }

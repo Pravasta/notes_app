@@ -3,7 +3,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:notes_app/core/exception/app_exception.dart';
 import 'package:notes_app/core/repositories/user_model.dart';
 
-abstract class FirebaseService {
+abstract class FirebaseAuthService {
   Future<UserModel> singInWithEmailAndPassword(String email, String password);
   Future<String> singUpWithEmailAndPassword(
     String userName,
@@ -16,11 +16,11 @@ abstract class FirebaseService {
   Future<bool> isUserLoggedIn();
 }
 
-class FirebaseServiceImpl implements FirebaseService {
+class FirebaseAuthServiceImpl implements FirebaseAuthService {
   final FirebaseAuth _auth;
   final FirebaseFirestore _firestore;
 
-  FirebaseServiceImpl({
+  FirebaseAuthServiceImpl({
     required FirebaseAuth auth,
     required FirebaseFirestore firestore,
   }) : _auth = auth,
@@ -142,8 +142,8 @@ class FirebaseServiceImpl implements FirebaseService {
     return _auth.currentUser != null;
   }
 
-  factory FirebaseServiceImpl.create() {
-    return FirebaseServiceImpl(
+  factory FirebaseAuthServiceImpl.create() {
+    return FirebaseAuthServiceImpl(
       auth: FirebaseAuth.instance,
       firestore: FirebaseFirestore.instance,
     );
