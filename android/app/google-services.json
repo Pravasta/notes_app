@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "91994283810",
+    "project_id": "notes-app-f2ad2",
+    "storage_bucket": "notes-app-f2ad2.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:91994283810:android:6d20aae731f946f0a78f7b",
+        "android_client_info": {
+          "package_name": "com.pravasta.notes_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBBJIuATrzmQN2IUREw7eNcCySX9GOgxck"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

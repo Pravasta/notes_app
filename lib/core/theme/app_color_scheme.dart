@@ -31,7 +31,7 @@ class ApptColorScheme {
     shadow: Color(0xFF000000),
     // surfaceTint: Color(0xFF7D3EB9),
     // scrim: Color(0xFF000000),
-    background: Color(0xFFFFFFFF),
+    background: AppColor.primary,
     onBackground: Color(0xFF1D1B1E),
   );
 
@@ -64,7 +64,7 @@ class ApptColorScheme {
     shadow: Color(0xFF000000),
     // surfaceTint: Color(0xFF7D3EB9),
     // scrim: Color(0xFF000000),
-    background: Color(0xFFFFFFFF),
+    background: AppColor.primary,
     onBackground: Color(0xFF1D1B1E),
   );
 }

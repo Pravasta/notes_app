@@ -10,7 +10,7 @@ class AppTheme {
       textTheme: AppTextStyle.lightTextTheme,
       primaryColor: AppColor.primary,
       colorScheme: ApptColorScheme.light,
-      scaffoldBackgroundColor: AppColor.black[50],
+      scaffoldBackgroundColor: AppColor.white,
       appBarTheme: const AppBarTheme(
         systemOverlayStyle: SystemUiOverlayStyle(
           // Status bar color
@@ -29,7 +29,7 @@ class AppTheme {
       textTheme: AppTextStyle.darkTextTheme,
       primaryColor: AppColor.primary,
       colorScheme: ApptColorScheme.dark,
-      scaffoldBackgroundColor: AppColor.primary,
+      scaffoldBackgroundColor: AppColor.black,
       appBarTheme: const AppBarTheme(
         systemOverlayStyle: SystemUiOverlayStyle(
           // Status bar color

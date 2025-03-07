@@ -27,7 +27,7 @@ class AppColor {
     900: Color(0xFFFFA41B),
   });
 
-  static const black = MaterialColor(0xFF111827, <int, Color>{
+  static const black = MaterialColor(0xff180E25, <int, Color>{
     50: Color(0xFFF9FAFB),
     100: Color(0xFFF3F4F6),
     200: Color(0xFFE5E7EB),
@@ -40,17 +40,17 @@ class AppColor {
     900: Color(0xFF111827),
   });
 
-  static const MaterialColor primary = MaterialColor(0xFF6A2FA9, <int, Color>{
-    50: Color(0xFFEDE6F5),
-    100: Color(0xFFD2C1E5),
-    200: Color(0xFFB597D4),
-    300: Color(0xFF976DC3),
-    400: Color(0xFF804EB6),
-    500: Color(0xFF6A2FA9),
-    600: Color(0xFF622AA2),
-    700: Color(0xFF572398),
-    800: Color(0xFF4D1D8F),
-    900: Color(0xFF3C127E),
+  static const MaterialColor primary = MaterialColor(0xff6A3EA1, <int, Color>{
+    50: Color(0xFFE9D8FF),
+    100: Color(0xFFD1A6FF),
+    200: Color(0xFFB874FF),
+    300: Color(0xFFA142FF),
+    400: Color(0xFF8A4DFF),
+    500: Color(0xFF6A3EA1),
+    600: Color(0xFF5F3791),
+    700: Color(0xFF543081),
+    800: Color(0xFF4A2971),
+    900: Color(0xff3A2258),
   });
 
   static const MaterialColor primaryAccent =
@@ -61,17 +61,30 @@ class AppColor {
         700: Color(0xFF7A33FF),
       });
 
-  static const MaterialColor secondary = MaterialColor(0xFFF9AA68, <int, Color>{
-    50: Color(0xFFFEF5ED),
-    100: Color(0xFFFDE6D2),
-    200: Color(0xFFFCD5B4),
-    300: Color(0xFFFBC495),
-    400: Color(0xFFFAB77F),
-    500: Color(0xFFF9AA68),
-    600: Color(0xFFF8A360),
-    700: Color(0xFFF79955),
-    800: Color(0xFFF6904B),
-    900: Color(0xFFF57F3A),
+  static const MaterialColor secondary = MaterialColor(0xffDEDC52, <int, Color>{
+    50: Color(0xFFFFF9C2),
+    100: Color(0xFFFFF08A),
+    200: Color(0xFFFFE952),
+    300: Color(0xFFFFE21A),
+    400: Color(0xFFFFDC00),
+    500: Color(0xFFDEDC52),
+    600: Color(0xFFC9C24A),
+    700: Color(0xFFB4B042),
+    800: Color(0xFF9E993A),
+    900: Color(0xFF84822D),
+  });
+
+  static const MaterialColor redColor = MaterialColor(0xFFE3342F, <int, Color>{
+    50: Color(0xFFFFF5F4),
+    100: Color(0xFFFFEBE9),
+    200: Color(0xFFEFAAA6),
+    300: Color(0xFFE3342F),
+    400: Color(0xFFD92E29),
+    500: Color(0xFFC82A25),
+    600: Color(0xFFB72621),
+    700: Color(0xFFA4221D),
+    800: Color(0xFF931E19),
+    900: Color(0xFF7F1711),
   });
 
   static const MaterialColor secondaryAccent =
